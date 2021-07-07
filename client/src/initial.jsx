@@ -1,12 +1,14 @@
 import React from 'react';
+import App from './index.jsx';
 
-const InitialImage = () => {
+const InitialImage = ({ goToPlace }) => {
+  console.log(goToPlace)
 
   return (
       <div className='initial'>
         <div className='initial-1'>
-          <h1>Do you need to get away, just not sure where?</h1>
-          <h2>Adventure is awaiting with just a click... </h2>
+          <h1>Need to get away, just not sure where?</h1>
+          <h2>Adventure awaits...</h2>
           <div className='cloud'>
             <img src='./library/cloud1.png' alt='' style={{'--i':3}}/>
             <img src='./library/cloud2.png' alt='' style={{'--i':2}}/>
@@ -25,7 +27,7 @@ const InitialImage = () => {
         </div>
         </div>
         <div className='initialButtonWrap'>
-          <button className='initialButton'>Let's go</button>
+          <button className='initialButton' onClick={goToPlace}>Let's go</button>
         </div>
       </div>
   )

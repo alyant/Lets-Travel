@@ -6,13 +6,16 @@ import RandomPlace from './randomPlace.jsx';
 
 const App = () => {
   const [currentSelect, setCurrentSelect] = useState(null);
+  const [initialClicked, setInitialClicked] = useState(false);
 
-
+  const goToPlace = () => {
+    setInitialClicked(true);
+  };
 
   return (
     <div>
-      {!currentSelect && <InitialImage/>}
-      {currentSelect && <RandomPlace/>}
+      {!initialClicked && <InitialImage goToPlace={goToPlace}/>}
+      {initialClicked && <RandomPlace/>}
     </div>
   )
 
