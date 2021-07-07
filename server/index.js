@@ -10,6 +10,9 @@ app.use(express.json());
 
 app.get('/nextPlace', (req, res) => {
   let nextRandomID = Math.floor(Math.random() * 30);
+  if (nextRandomID === 0) {
+    nextRandomID = 30;
+  }
   getQuery(nextRandomID, (data) => {
     res.send(data);
   })

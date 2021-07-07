@@ -43,29 +43,29 @@ const ThePlace = ({ data }) => {
 
 
   return (
-    <div className='placeImages'>
-      {data.images.map((image, index) => {
-        return (
-          <div className="mySlides" key={index}>
-            <div className="numbertext">{`${index + 1} / ${data.images.length}`}</div>
-            <img src={image.url} style={{ 'object-fit':'cover', width: '1000px', height: '750px'}}/>
-          </div>
-          )
-        })
-      }
-      <a className='prev' onClick={plusSlides.bind(null, -1)}> &#10094; </a>
-      <a className='next' onClick={plusSlides.bind(null, 1)}> &#10095; </a>
-      <div className='row'>
-      {data.images.map((image, index) => {
-        return (
-          <div className='column' key={index}>
-            <img className='demo cursor' src={image.url} id={index + 1} style={{'object-fit': 'cover', width: '100px', height: '100px'}} onClick={(e) => {currentSlide(Number(e.target.id)) }}/>
-          </div>
-          )
-        })
+      <div className='placeImages'>
+        {data.images.map((image, index) => {
+          return (
+            <div className="mySlides" key={index}>
+              <div className="numbertext">{`${index + 1} of ${data.images.length}`}</div>
+              <img src={image.url} style={{ 'objectFit':'cover', width: '1000px', height: '600px'}}/>
+            </div>
+            )
+          })
         }
+        <a className='prev' onClick={plusSlides.bind(null, -1)}> &#10094; </a>
+        <a className='next' onClick={plusSlides.bind(null, 1)}> &#10095; </a>
+        <div className='row'>
+        {data.images.map((image, index) => {
+          return (
+            <div className='column' key={index}>
+              <img className='demo cursor' src={image.url} id={index + 1} style={{'objectFit': 'cover', width: '100px', height: '100px'}} onClick={(e) => {currentSlide(Number(e.target.id)) }}/>
+            </div>
+            )
+          })
+          }
+        </div>
       </div>
-    </div>
   )
 
 }

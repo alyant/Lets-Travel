@@ -6,8 +6,8 @@ const PotentialVisit = () => {
 
 
   return (
-    <div>
-
+    <div className='potentialVisit'>
+      This is working
     </div>
   )
 

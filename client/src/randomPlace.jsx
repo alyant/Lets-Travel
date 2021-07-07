@@ -6,7 +6,6 @@ import PotentialVisit from './potentialVisit.jsx';
 
 
 const RandomPlace = () => {
-
   const [currentSelect, setCurrentSelect] = useState(null);
   const [currentSlogan, setCurrentSlogan] = useState('');
 
@@ -44,13 +43,21 @@ const RandomPlace = () => {
     getNextPlace();
   }, []);
 
+  if (!currentSelect) {return 'Still loading'}
+
   return (
     <div>
-      <button onClick={getNextPlace}>{currentSlogan}</button>
-      <Weather/>
+      <div className='intro'>
+        <h2 className='cityHeader'>{`How do you feel about ${currentSelect.place.city}?`}</h2>
+        <button onClick={getNextPlace} className='nextPlaceButton'>{currentSlogan}</button>
+      </div>
+      <div className='mainPlace'>
       <ThePlace data={currentSelect}/>
       <PotentialVisit/>
     </div>
+    <Weather/>
+    </div>
+
   )
 }
 
