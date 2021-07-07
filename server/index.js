@@ -6,7 +6,7 @@ const db = require('../db/index.js');
 app.use(express.static(__dirname + '/../client/dist'));
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get('/randomPlace', (req, res) => {
   res.send("Hi")
 })
 

@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import InitialImage from './initial.jsx';
+import RandomPlace from './randomPlace.jsx';
 
 const App = () => {
-
+  const [currentSelect, setCurrentSelect] = useState(null);
 
 
 
   return (
     <div>
-      <h1>Do you need to get away, just not sure where?</h1>
-      <h2>Adventure is awaiting with just a click... </h2>
-      <button>Let's rock n roll</button>
+      {!currentSelect && <InitialImage/>}
+      {currentSelect && <RandomPlace/>}
     </div>
   )
 
