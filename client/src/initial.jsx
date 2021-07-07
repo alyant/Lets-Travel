@@ -25,7 +25,7 @@ const InitialImage = () => {
         </div>
         </div>
         <div className='initialButtonWrap'>
-          <button className='initialButton'>Let's rock n roll</button>
+          <button className='initialButton'>Let's go</button>
         </div>
       </div>
   )
