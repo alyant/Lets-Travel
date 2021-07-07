@@ -47,9 +47,12 @@ const RandomPlace = () => {
 
   return (
     <div>
-      <div className='intro'>
-        <h2 className='cityHeader'>{`How do you feel about ${currentSelect.place.city}?`}</h2>
-        <button onClick={getNextPlace} className='nextPlaceButton'>{currentSlogan}</button>
+      <div className='header'>
+        <img src='./library/Logo.png' className='logo'/>
+        <div className='intro'>
+          <h2 className='cityHeader'>{`How do you feel about ${currentSelect.place.city}?`}</h2>
+          <button onClick={getNextPlace} className='nextPlaceButton'>{currentSlogan}</button>
+        </div>
       </div>
       <div className='mainPlace'>
       <ThePlace data={currentSelect}/>

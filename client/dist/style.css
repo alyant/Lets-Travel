@@ -169,11 +169,24 @@
   display: flex;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  align-content: stretch;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+}
+
 .intro {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-grow: 2;
 }
 
 .cityHeader {
@@ -255,11 +268,11 @@
   width: 16.66%;
 }
 
-.demo {
+.imageCursor {
   opacity: 0.6;
 }
 
 .active,
-.demo:hover {
+.imageCursor:hover {
   opacity: 1;
 }
