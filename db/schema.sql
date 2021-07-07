@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS images(
 
 CREATE TABLE IF NOT EXISTS current(
   current_id INT PRIMARY KEY,
-  place_id INT REFERENCES places (place_id),
+  place_id INT REFERENCES places (place_id)
 );
 
 COPY places(place_id, city, country, lat, long, description, airport)

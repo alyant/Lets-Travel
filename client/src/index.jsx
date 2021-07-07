@@ -5,7 +5,6 @@ import InitialImage from './initial.jsx';
 import RandomPlace from './randomPlace.jsx';
 
 const App = () => {
-  const [currentSelect, setCurrentSelect] = useState(null);
   const [initialClicked, setInitialClicked] = useState(false);
 
   const goToPlace = () => {
