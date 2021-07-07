@@ -31,6 +31,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./client/src/potentialVisit.jsx":
+/*!***************************************!*\
+  !*** ./client/src/potentialVisit.jsx ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar PotentialVisit = function PotentialVisit() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PotentialVisit);\n\n//# sourceURL=webpack://lets-travel/./client/src/potentialVisit.jsx?");
+
+/***/ }),
+
 /***/ "./client/src/randomPlace.jsx":
 /*!************************************!*\
   !*** ./client/src/randomPlace.jsx ***!
@@ -38,7 +49,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar RandomPlace = function RandomPlace() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h2\", null, \" This is working \"));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RandomPlace);\n\n//# sourceURL=webpack://lets-travel/./client/src/randomPlace.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _weather_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./weather.jsx */ \"./client/src/weather.jsx\");\n/* harmony import */ var _weather_jsx__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_weather_jsx__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _thePlace_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./thePlace.jsx */ \"./client/src/thePlace.jsx\");\n/* harmony import */ var _potentialVisit_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./potentialVisit.jsx */ \"./client/src/potentialVisit.jsx\");\n\n\n\n\n\n\nvar RandomPlace = function RandomPlace() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement((_weather_jsx__WEBPACK_IMPORTED_MODULE_2___default()), null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_thePlace_jsx__WEBPACK_IMPORTED_MODULE_3__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_potentialVisit_jsx__WEBPACK_IMPORTED_MODULE_4__.default, null));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RandomPlace);\n\n//# sourceURL=webpack://lets-travel/./client/src/randomPlace.jsx?");
+
+/***/ }),
+
+/***/ "./client/src/thePlace.jsx":
+/*!*********************************!*\
+  !*** ./client/src/thePlace.jsx ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar ThePlace = function ThePlace() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ThePlace);\n\n//# sourceURL=webpack://lets-travel/./client/src/thePlace.jsx?");
+
+/***/ }),
+
+/***/ "./client/src/weather.jsx":
+/*!********************************!*\
+  !*** ./client/src/weather.jsx ***!
+  \********************************/
+/***/ (() => {
+
+eval("\n\n//# sourceURL=webpack://lets-travel/./client/src/weather.jsx?");
 
 /***/ }),
 
