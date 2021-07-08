@@ -1,8 +1,9 @@
 const { Pool } = require('pg');
+const { DB_PASSWORD, DB_USER } = require('../config.js')
 
 const pool = new Pool({
-  user: 'ag',
-  password: 'secret',
+  user: DB_USER,
+  password: DB_PASSWORD,
   database: 'lets_travel'
 });
 

@@ -58,7 +58,7 @@ const RandomPlace = () => {
         <ThePlace data={currentSelect}/>
         <div className='leftColumn'>
           <PotentialVisit data={currentSelect.place}/>
-          <Weather/>
+          <Weather data={currentSelect.place}/>
         </div>
     </div>
     </div>
