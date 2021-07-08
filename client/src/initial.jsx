@@ -2,7 +2,6 @@ import React from 'react';
 import App from './index.jsx';
 
 const InitialImage = ({ goToPlace }) => {
-  console.log(goToPlace)
 
   return (
       <div className='initial'>

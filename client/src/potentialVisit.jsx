@@ -9,7 +9,7 @@ const PotentialVisit = ({ data }) => {
   const [currentList, setCurrentList] = useState([]);
 
   const postPlace = () => {
-    if (currentList.length >= 6) {
+    if (currentList.length >= 9) {
       alert('You are considering too many places! Please remove a city before adding another.')
       return;
     }

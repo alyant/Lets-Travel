@@ -21,6 +21,7 @@ const Weather = ( {data} ) => {
       console.log(res.data.city_name);
       const newWeather= res.data.data.map((item) => {
         const temp = {
+        date: item.datetime.slice(6),
         high: Math.round((item.max_temp * 1.8) + 32),
         low: Math.round((item.min_temp * 1.8) + 32),
         description: item.weather.description,
@@ -33,10 +34,33 @@ const Weather = ( {data} ) => {
       console.error(error);
     });
   }
-console.log(weather)
+
   return (
     <div className='weather' onClick={getWeather}>
       16 Day Weather report
+      <table className='weatherTable'>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>High</th>
+            <th>Low</th>
+            <th colSpan='2' scope='colgroup'>Forecast</th>
+          </tr>
+        </thead>
+        <tbody>
+          {!weather ? null : weather.map((day) => {
+          return (
+            <tr className='weatherDay' key={day.date}>
+              <td>{day.date}</td>
+              <td>{day.high}℉</td>
+              <td>{day.low}℉</td>
+              <td><img src={`./library/icons/${day.icon}.png`} className='weatherIcon'></img></td>
+              <td>{day.description}</td>
+            </tr>
+          )
+        })}
+        </tbody>
+      </table>
     </div>
   )
 
