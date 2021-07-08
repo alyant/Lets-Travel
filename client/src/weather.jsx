@@ -35,9 +35,12 @@ const Weather = ( {data} ) => {
     });
   }
 
+  useEffect(() => {
+    getWeather();
+  }, [data])
+
   return (
     <div className='weather' onClick={getWeather}>
-      16 Day Weather report
       <table className='weatherTable'>
         <thead>
           <tr>
