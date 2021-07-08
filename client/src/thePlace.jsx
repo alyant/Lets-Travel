@@ -6,19 +6,16 @@ const ThePlace = ({ data }) => {
   if (!data) {
     return 'Still Loading';
   }
-  console.log(data);
 
   const [currentSlideNumber, setCurrentSlideNumber] = useState(1);
 
   const plusSlides = (n) => {
     let newSlide = currentSlideNumber + n;
     setCurrentSlideNumber(newSlide)
-    console.log('plusSlides', currentSlideNumber)
     showSlides(newSlide);
   }
 
   const currentSlide = (n) => {
-    console.log(n)
     setCurrentSlideNumber(n)
     showSlides(n);
   }

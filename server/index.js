@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 3400;
 const db = require('../db/index.js');
-const { getQuery, postPotential } = require('../db/index.js');
+const { getQuery, postPotential, getPotential, deletePotential } = require('../db/index.js');
 
 
 app.use(express.static(__dirname + '/../client/dist'));
@@ -16,13 +16,25 @@ app.get('/nextPlace', (req, res) => {
   getQuery(nextRandomID, (data) => {
     res.send(data);
   })
-})
+});
 
 app.post('/postPlace', (req, res) => {
   postPotential(req.body, (data) => {
     res.send(data);
   })
-})
+});
+
+app.get('/getPotential', (req, res) => {
+  getPotential((data) => {
+    res.send(data);
+  })
+});
+
+app.put('/deletePotential', (req, res) => {
+  deletePotential(req.body.id, (data) => {
+    res.send(data);
+  })
+});
 
 
 app.listen(PORT, () => {

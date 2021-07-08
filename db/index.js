@@ -28,16 +28,41 @@ const postPotential = (id, cb) => {
   const sql = `INSERT INTO current (place_id) VALUES (${id.place_id});`;
   pool.query(sql)
   .then((res) => {
-    return pool.query(`SELECT places.city, places.country
+    return pool.query(`SELECT places.city, places.country, places.place_id
     FROM places
     INNER JOIN current ON current.place_id = places.place_id;`)
   })
   .then((data) => {
     cb(data.rows)
   })
+  .catch(err => cb('Already logged'));
+};
+
+const getPotential = (cb) => {
+  const sql = `SELECT places.city, places.country, places.place_id
+  FROM places
+  INNER JOIN current ON current.place_id = places.place_id;`;
+  pool.query(sql)
+  .then((data) => {
+    cb(data.rows)
+  })
+  .catch(err => cb(err));
+};
+
+const deletePotential = (id, cb) => {
+  const sql = `DELETE FROM current WHERE place_id = ${id};`;
+  pool.query(sql)
+  .then(() => {
+    getPotential(cb);
+  })
+  .catch((err) => {
+    cb(err);
+  });
 };
 
 module.exports = {
   getQuery,
-  postPotential
+  postPotential,
+  getPotential,
+  deletePotential
 }
