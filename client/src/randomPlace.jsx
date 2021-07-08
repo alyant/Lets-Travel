@@ -55,10 +55,12 @@ const RandomPlace = () => {
         </div>
       </div>
       <div className='mainPlace'>
-      <ThePlace data={currentSelect}/>
-      <PotentialVisit/>
+        <ThePlace data={currentSelect}/>
+        <div className='leftColumn'>
+          <PotentialVisit data={currentSelect.place}/>
+          <Weather/>
+        </div>
     </div>
-    <Weather/>
     </div>
 
   )

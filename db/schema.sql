@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS images(
 );
 
 CREATE TABLE IF NOT EXISTS current(
-  current_id INT PRIMARY KEY,
+  current_id SERIAL PRIMARY KEY,
   place_id INT REFERENCES places (place_id)
 );
 

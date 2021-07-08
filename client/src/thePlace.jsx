@@ -6,6 +6,7 @@ const ThePlace = ({ data }) => {
   if (!data) {
     return 'Still Loading';
   }
+  console.log(data);
 
   const [currentSlideNumber, setCurrentSlideNumber] = useState(1);
 
@@ -28,10 +29,10 @@ const ThePlace = ({ data }) => {
     if (n > slides.length) {setCurrentSlideNumber(1); n = 1}
     if (n < 1) {setCurrentSlideNumber(slides.length); n = slides.length}
     for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+      slides[i].style.display = 'none';
     }
     for (let i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace('active', '');
     }
     slides[n-1].style.display = 'block';
     dots[n-1].className += 'active';
@@ -65,6 +66,8 @@ const ThePlace = ({ data }) => {
           })
           }
         </div>
+        <div>Why you should visit: <br/> {data.place.description}</div>
+        <div>Closest Airport: {data.place.airport}</div>
       </div>
   )
 

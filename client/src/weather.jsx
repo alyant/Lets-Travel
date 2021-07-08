@@ -5,8 +5,8 @@ const Weather = () => {
 
 
   return (
-    <div>
-
+    <div className='weather'>
+      16 Day Weather report
     </div>
   )
 

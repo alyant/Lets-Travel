@@ -24,6 +24,20 @@ const getQuery = (id, cb) => {
   })
 };
 
+const postPotential = (id, cb) => {
+  const sql = `INSERT INTO current (place_id) VALUES (${id.place_id});`;
+  pool.query(sql)
+  .then((res) => {
+    return pool.query(`SELECT places.city, places.country
+    FROM places
+    INNER JOIN current ON current.place_id = places.place_id;`)
+  })
+  .then((data) => {
+    cb(data.rows)
+  })
+};
+
 module.exports = {
-  getQuery
+  getQuery,
+  postPotential
 }
