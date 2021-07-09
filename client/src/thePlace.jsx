@@ -63,8 +63,13 @@ const ThePlace = ({ data }) => {
           })
           }
         </div>
-        <div>Why you should visit: <br/> {data.place.description}</div>
-        <div>Closest Airport: {data.place.airport}</div>
+        <div className='placeDesc'>
+          <div className='placeDescription'>Why you should visit:</div>
+          <div id='description'>{data.place.description}</div>
+          <div className='airport'>Closest Airport: </div>
+          <div id='airportDetail'>{data.place.airport}</div>
+        </div>
+
       </div>
   )
 
