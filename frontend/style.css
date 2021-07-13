@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Lato',sans-serif;
+}
+
+/* ---------INITIAL----------- */
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.test1{
+  color: #e9f0ee;
+  font-size: 45pt;
+  text-align: center;
+  position: absolute;
+  top:30%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  z-index: 99;
+  width: fit-content;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.test2{
+  position: absolute;
+  top:40%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  z-index: 99;
+  color: #e9f0ee;
+  font-size: 30pt;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.dark-overlay .initialButtonWrap {
+  position: absolute;
+  top:70%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  z-index: 99;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.initialButton {
+  min-width: 300px;
+  min-height: 60px;
+  font-size: 22pt;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #e9f0ee;
+  background: linear-gradient(90deg, #0fa0e4c7 0%, rgb(122, 214, 205) 50%, #0fa0e4c7 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 15px 15px 28px rgba(66, 105, 179, 0.5);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+
+.initialButton::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: 312px;
+  min-height: 72px;
+  border: 6px solid #1c56c2a1;
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.411);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.initialButton:hover, .initialButton:focus {
+  color: #e9f0ee;
+  transform: translateY(-6px);
+}
+
+.initialButton:hover::before, .initialButton:focus::before {
+  opacity: 1;
+}
+
+.initialButton::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #0362df91;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.initialButton:hover::after, .initialButton:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* ---------RANDOM PLACE----------- */
+
+.mainPlace {
+  display: flex;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+.logo {
+  align-content: stretch;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-left: 150px;
+}
+
+.passport{
+  margin-right: 150px;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  transform: rotate(10deg);
+  overflow: auto;
+  opacity: .3;
+}
+
+.city{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 55pt;
+  transform: rotate(6deg);
+  z-index: 99;
+  color: #0fa6bd;
+  margin-right: 50px;
+  margin-top: 40px;
+  overflow: visible;
+  position: absolute;
+  margin-left: 66%;
+  width:500px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.cityHeader {
+  padding: 20px;
+  font-size: 25pt;
+  text-transform: uppercase;
+}
+
+.nextPlaceButton {
+  margin-bottom: 20px;
+  width: 240px;
+  height: 40px;
+  font-size: 10pt;
+  white-space: normal;
+  word-wrap: break-word;
+  text-transform: uppercase;
+  text-overflow: clip;
+  letter-spacing: 1.3px;
+  color: #313133;
+  background-color: #9cdbe4;
+  border: none;
+  border-radius: 1000px;
+  cursor: pointer;
+  outline: black;
+}
+
+/* ---------POTENTIAL VISIT----------- */
+
+.potentialVisit {
+  order: 0;
+}
+.stickyNote{
+  margin-top: 20px;
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:325px;
+  width: 325px;
+  padding:1em;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  transform: rotate(-6deg);
+  cursor: pointer;
+}
+.potentialHeader {
+  font-weight: bold;
+  font-size: 15pt;
+}
+.potentialList {
+  padding-top: 4px;
+  font-family: 'Reenie Beanie';
+  font-size: 17pt;
+  font-weight: normal;
+}
+
+.potentialButton{
+  width: 100px;
+  height: 40px;
+  font-size: 10pt;
+  white-space: normal;
+  word-wrap: break-word;
+  text-transform: uppercase;
+  text-overflow: clip;
+  letter-spacing: 1.3px;
+  color: #313133;
+  background-color: #9cdbe4;
+  border: none;
+  border-radius: 1000px;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: black;
+  position: relative;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 130px;
+}
+
+
+/* ---------WEATHER----------- */
+
+.weather{
+  order: 2;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+table{
+  width: 325px;
+  margin-right: 20px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.weatherIcon{
+  width: 30px;
+  height: 30px;
+}
+
+th, td {
+  padding: 5px;
+  border-bottom: 1px solid #0fa6bd;
+  text-align: center;
+}
+
+
+/* ---------THE PLACE----------- */
+
+
+* {
+  box-sizing: border-box;
+}
+
+.placeImages {
+  z-index: 0;
+  order: 2;
+  width: 1000px;
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.imageCursor {
+  opacity: 0.6;
+}
+
+.active,
+.imageCursor:hover {
+  opacity: 1;
+}
+
+.demo:hover {
+  opacity:0.5;
+}
+
+.placeDesc{
+  border: 2px solid #9cdbe4;
+  border-radius: 5px;
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: 100px;
+
+}
+
+
+
+.placeDescription{
+  padding-top: 4px;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 22pt;
+  font-weight: normal;
+  letter-spacing: 1.3px;
+}
+
+#description{
+  padding-top: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 20px;
+  font-size: 15pt;
+}
+
+.airport{
+  padding-top: 30px;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 22pt;
+  font-weight: normal;
+  letter-spacing: 1.3px;
+}
+
+#airportDetail{
+  padding-top: 15px;
+  font-size: 15pt;
+}
