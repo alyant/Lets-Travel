@@ -1,25 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
-import InitialImage from '../components/initial.jsx';
-import RandomPlace from '../components/randomPlace.jsx';
+import React from 'react';
+import Image from 'next/image'
+import initialPhoto from '../public/initial.jpg';
+import Link from 'next/link'
 
-const App = () => {
-  const [initialClicked, setInitialClicked] = useState(false);
-
-  const goToPlace = () => {
-    setInitialClicked(true);
-  };
+const InitialImage = ({ goToPlace }) => {
 
   return (
-    <div>
-      {!initialClicked && <InitialImage goToPlace={goToPlace}/>}
-      {initialClicked && <RandomPlace/>}
-    </div>
-  )
+    <html lang='en'>
+      <title className='test1'>Travel Idea Generator</title>
+      <Image
+      src={initialPhoto}
+      alt='initialphoto'
+      layout="fill"
+      objectFit="cover"
+      quality={100}
+      placeholder="blur"
+      />
+      <div  className='dark-overlay'>
+      <h1 className='test1'>Need to get away, just not sure where?</h1>
+        <h2 className='test2'>Adventure awaits...</h2>
+        <div className='initialButtonWrap'>
+        <Link href="/randomPlace">
+          <button className='initialButton'>Let's go</button>
+        </Link>
 
+        </div>
+    </div>
+    </html>
+
+
+  )
 }
 
-export default App;
-
-// ReactDOM.render(<App/>, document.getElementById('app'));
+export default InitialImage;

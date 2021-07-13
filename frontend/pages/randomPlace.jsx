@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Weather from './weather.jsx';
-import ThePlace from './thePlace.jsx';
-import PotentialVisit from './potentialVisit.jsx';
+import Weather from '../components/weather.jsx';
+import ThePlace from '../components/thePlace.jsx';
+import PotentialVisit from '../components/potentialVisit.jsx';
 
 
 const RandomPlace = () => {
@@ -47,6 +47,7 @@ const RandomPlace = () => {
 
   return (
     <div>
+      <title className='test1'>{currentSelect.place.city}</title>
       <div className='header'>
         <img src='/Logo.png' className='logo'/>
         <div className='intro'>
