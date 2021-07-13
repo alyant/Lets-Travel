@@ -7,7 +7,7 @@ const InitialImage = ({ goToPlace }) => {
 
   return (
     <html lang='en'>
-      <title className='test1'>Travel Idea Generator</title>
+      <title>Travel Idea Generator</title>
       <Image
       src={initialPhoto}
       alt='initialphoto'
@@ -17,8 +17,8 @@ const InitialImage = ({ goToPlace }) => {
       placeholder="blur"
       />
       <div  className='dark-overlay'>
-      <h1 className='test1'>Need to get away, just not sure where?</h1>
-        <h2 className='test2'>Adventure awaits...</h2>
+      <h1 className='initialHeader'>Need to get away, just not sure where?</h1>
+        <h2 className='initialSubtitle'>Adventure awaits...</h2>
         <div className='initialButtonWrap'>
         <Link href="/randomPlace">
           <button className='initialButton'>Let's go</button>

@@ -17,7 +17,7 @@
   height: 100%;
 }
 
-.test1{
+.initialHeader{
   color: #e9f0ee;
   font-size: 45pt;
   text-align: center;
@@ -29,7 +29,7 @@
   width: fit-content;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-.test2{
+.initialSubtitle{
   position: absolute;
   top:40%;
   left: 50%;
@@ -59,8 +59,8 @@
   text-transform: uppercase;
   letter-spacing: 1.3px;
   font-weight: 700;
-  color: #e9f0ee;
-  background: linear-gradient(90deg, #0fa0e4c7 0%, rgb(122, 214, 205) 50%, #0fa0e4c7 100%);
+  color: #0fa6bd;
+  background: linear-gradient(90deg, #7ecef3e8 0%, #eaf4f8e8 50%, #7ecef3e8 100%);
   border: none;
   border-radius: 1000px;
   box-shadow: 15px 15px 28px rgba(66, 105, 179, 0.5);

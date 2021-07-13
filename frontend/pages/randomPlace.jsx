@@ -47,7 +47,7 @@ const RandomPlace = () => {
 
   return (
     <div>
-      <title className='test1'>{currentSelect.place.city}</title>
+      <title className='initialHeader'>{currentSelect.place.city}</title>
       <div className='header'>
         <img src='/Logo.png' className='logo'/>
         <div className='intro'>
