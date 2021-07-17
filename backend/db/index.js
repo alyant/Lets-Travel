@@ -4,7 +4,9 @@ const { DB_PASSWORD, DB_USER } = require('../config.js')
 const pool = new Pool({
   user: DB_USER,
   password: DB_PASSWORD,
-  database: 'lets_travel'
+  database: 'lets_travel',
+  host: 'localhost',
+  port: 5432,
 });
 
 pool.connect()
