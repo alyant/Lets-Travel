@@ -1,5 +1,5 @@
 
-# Project Title
+# Let's Travel
 
 A random travel idea generator application for someone who just doesn't know where to go and just needs a little bit of inspiration!
 
