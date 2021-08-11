@@ -10,3 +10,17 @@ describe('My first test', () => {
     expect(true).to.equal(true)
   })
 })
+
+describe('Page loading', () => {
+  it('should load properly', () => {
+    cy.visit('http://localhost:3000')
+  })
+  it('should contain proper titles', () => {
+    cy.visit('http://localhost:3000')
+    cy.contains('Need to get away')
+  })
+  it('should take you to random generator page on click', () => {
+    cy.visit('http://localhost:3000')
+    cy.contains("Let's go").click()
+  })
+})
