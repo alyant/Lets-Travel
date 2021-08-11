@@ -1,0 +1,29 @@
+{
+  "name": "lets-travel",
+  "version": "1.0.0",
+  "description": "Random places to travel to generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alyant34/Lets-Travel.git"
+  },
+  "author": "Alyssa Antonaccio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alyant34/Lets-Travel/issues"
+  },
+  "homepage": "https://github.com/alyant34/Lets-Travel#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.6.0",
+    "postgres": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint-config-next": "^11.0.1",
+    "nodemon": "^2.0.9"
+  }
+}
