@@ -18,9 +18,13 @@ describe('Page loading', () => {
   it('should contain proper titles', () => {
     cy.visit('http://localhost:3000')
     cy.contains('Need to get away')
+
   })
   it('should take you to random generator page on click', () => {
     cy.visit('http://localhost:3000')
     cy.contains("Let's go").click()
+
+    cy.url()
+      .should('include', 'randomPlace')
   })
 })
